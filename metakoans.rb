@@ -227,7 +227,7 @@ end
 
 class MetaStudent
   def initialize knowledge
-    require knowledge
+    require_relative knowledge
   end
   def ponder koan
     begin
