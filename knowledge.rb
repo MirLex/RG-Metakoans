@@ -1,7 +1,9 @@
 def attribute(name)
-    
+
+  name , arg = name.first if name.is_a?(Hash)
+
   define_method(name) do
-    instance_variable_set("@#{name}") unless instance_variable_get("@#{name}")
+    instance_variable_set("@#{name}",arg) unless instance_variable_get("@#{name}")
     instance_variable_get("@#{name}")
   end
 
